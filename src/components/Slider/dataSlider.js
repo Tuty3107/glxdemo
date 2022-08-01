@@ -1,0 +1,40 @@
+const carouselItems = [
+    {
+      id:0,
+      src:'sliderImg/2048x682_1657075970993.jpg'
+    },
+    {
+      id:1,
+      src:'sliderImg/glx-qt-vebap99k-digital-new-2048x682_1657091072768.jpg'
+    },
+    {
+      id:2,
+      src:"sliderImg/glx-qt-vebap99k-digital-new-2048x682_1657091072768.jpg"
+    },
+    {
+      id:3,
+      src:'sliderImg/reviewnhanbong-tt-digital-2048x682_1656490329648.jpg'
+    },
+    {
+      id:4,
+      link:'',
+      src:'sliderImg/shopee-2906-2048x682_1656490482179.jpg'
+    },
+    {
+      id:5,
+      link:'',
+      src:'sliderImg/shopee-garena-2048x682_1656557156388.jpg'
+    },
+    {
+      id:6,
+      link:'',
+      src:'sliderImg/summer-combo-digital-2048x682_1656490827213.jpg'
+    },
+    {
+      id:7,
+      link:'',
+      src:'sliderImg/uudaicombolt-digital-2048x682_1656490671929.jpg'
+    }
+]
+
+export default carouselItems

@@ -1,0 +1,27 @@
+.title-blog{
+    color: #434846;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+}
+/*line intro*/
+.title-blog:hover {
+    h3 {
+        color: var(--orange-color)
+    }
+}
+.title-blog{
+    color: #434846;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    position: relative;
+    h3::after{
+        content:"";
+        display: block;
+        width: 50px;
+        height: 2px;
+        background-color: var(--orange-color);
+        margin: 10px 0;
+        
+    }
+}
+

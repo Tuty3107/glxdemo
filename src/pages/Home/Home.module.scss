@@ -1,0 +1,36 @@
+.hotnews {
+    margin: 25px 0;
+    color: red;
+    font-size: 20px;
+    float: right;
+    a{
+        color: var(--VN-color-text);
+        text-decoration: none;
+    }
+}
+.moreInfo-btn{
+    position: relative;
+    button {
+        position: absolute;
+        right: 0;
+        font-size: 1.4rem;
+        padding: 15px 20px;
+        text-transform: uppercase;
+        svg {
+            margin-left: 10px;
+        }
+    }
+}
+/*Movie Blog*/
+/*Content Seo*/
+@media screen and (max-width: 600px) {
+    .moreInfo-btn {
+        button {
+            width: 114px;
+            height: 34px;
+            padding: 0;
+            font-size: 1.2rem;
+        }
+    }
+}
+

@@ -1,0 +1,46 @@
+.wrapper {
+  width:100%;
+  max-width: 100%;
+  height: auto;
+  color: #fff;
+  margin-top: 0;
+  position: relative;
+  top: -35px;
+}
+//For Quick box
+.bg333 {
+  width: var(--select-width);
+  max-width: 100%1;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  animation: growthUp 1s ease-in-out;
+  color: #f7f8f9;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top:0;
+  margin: 30px 60px 0 0;
+}
+.bg000 {
+  background-color: #f7f8f9;
+  div {
+    *{
+      color: var(--nav-color);
+      border-bottom-color: var(--nav-color);
+      form > div > a > label {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+@keyframes growthUp {
+  from {
+    transform: scale(50%);
+    opacity: 0;
+  }
+  to {
+    transform: scale(100%);
+    opacity: 1;
+  }
+}

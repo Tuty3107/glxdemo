@@ -1,48 +1,12 @@
-/*movie-tab-line*/
-.movie-tab-line {
-    list-style-type: none;
-    padding-top: 25px;
-    position: relative;
+.vnTit,.enTit {
+  font-size: 1.6rem;
+  margin: 5px 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 34px;
 }
-.movie-tab-line-item{
-    display: inline-block;
-    margin-right: 10px;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: 2rem;
+.enTit {
+  color: var(--text-color);
 }
-.movie-tab-active {
-    height: 2px;
-    background-color: var(--orange-color);
-    animation: growthUp .5s linear;
-}
-.tab-movie-content{
-    clear: right;
-}
-
-.tabpane-1, .tabpane-2{
-    margin-bottom: 20px;
-    margin-right: 20px;
-    article {
-        max-width: 100%;
-    }
-}
-
- @keyframes growthUp {
-    from {
-        transform: scaleX(0%);
-    }
-    to {
-        transform: scaleX(100%);
-    }  
- }
-
- @media screen and (max-width: 600px) {
-    .movie-tab-line-item {
-        margin: 0 10px 20px 10px;
-    }
-    .tabpane-1, .tabpane-2 {
-        margin-left: 15px;
-    }
-
- }

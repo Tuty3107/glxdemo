@@ -1,23 +1,29 @@
+import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Select.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
+function Select({ children, onChange, label}) {
 
-function Select({ item=[] }) {
-    const renderItem = () => {
-        return(
-            <select className={cx("select-item")}>
-                {item.map((item, index) => (
-                    <option key={index} className={cx("op-items")}>{item}</option>
-                ))}
-            </select>
-        )
-    }
   return (
-    <div className={cx("wrapper")}>
-        {renderItem()}
-    </div>
-  )
+    <form className={cx("form-select")}>
+      <div className={cx("group-select")}>
+        <a className={cx("btn-select")}>
+          <label className={cx("btn-select-value")}>{label}</label>
+          <span className={cx("btn-select-arrow")}>
+            <FontAwesomeIcon icon={faAngleDown} />
+          </span>
+          <select name="options-select"
+            className={cx("options-select")}
+            onChange={onChange}>
+              {children}
+            </select>
+        </a>
+      </div>
+    </form>
+  );
 }
 
-export default Select
+export default Select;

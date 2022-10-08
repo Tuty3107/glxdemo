@@ -1,27 +1,65 @@
-.wrapper{
-    max-width: 100%;
-    display: inline-block;
+/*Group select*/
+.form-select {
+  position: relative;
+  margin-bottom: 45px;
+  width: 100%;
 }
-.select-item{
-    max-width: 100%;
-    border: none;
-    display: block;
-    position: absolute;
-    left: 0;
-    top:0;
-    text-align: left;
-    padding: 20px 20px 20px 12px;
-    right: 35px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    border: none;
-    width: 100%;
-    background: transparent;
-    height: 0;
-    -webkit-appearance: none;
+.btn-select {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  display: block;
+  height: 20px;
+  border-radius: 0;
+  margin-bottom: 15px;
 }
-
-.op-items {
-    font-size: 1.4rem;
-    color: #43464b;
+.btn-select {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  border-radius: 0;
+  margin-bottom: 15px;
+}
+.btn-select-value {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.4);
+  color: var(--primary);
+  width: 100%;
+  padding: 7px 10px;
+  height: 40px;
+}
+.btn-select-arrow {
+  float: right;
+  line-height: 20px;
+  position: absolute;
+  padding: 9px 10px;
+  top: -10%;
+  right: 0;
+  color: var(--primary);
+}
+.options-select {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  text-align: left;
+  padding: 20px 20px 20px 12px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  border: none;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  height: 0;
+  -webkit-appearance: none;
+}
+@media screen and (max-width: 600px) {
+  .form-select {
+    margin-bottom: 20px;
+    border: 1px solid black;
+  }
+  .btn-select-value,
+  .btn-select-arrow {
+    color: var(--nav-color);
+  }
 }

@@ -1,0 +1,134 @@
+.footer-list{
+    padding-bottom: 50px;
+}
+.title {
+    position: relative;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 18px;
+    line-height: 1;
+    position: relative;
+    text-transform: uppercase;
+    margin: 0 0 25px 0;
+    text-transform: uppercase;
+}
+.list-unstyled{
+    ul {
+        padding-right: 16px;
+        margin-bottom: 25px;
+    }
+}
+.list-unstyled {
+    ul {
+        li {
+            color: #a0a3a7;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            margin: 0 0 7px 0;
+            padding: 0 0 7px 0;
+            cursor: pointer;
+        }  
+    }
+}
+.connect-icons , .download-icons{
+    li {
+        display: inline-block;
+        color: #a0a3a7;
+        padding-right: 10px;
+    }
+}
+.footer-icon{
+    width: 26px;
+    height: 26px;
+}
+.footer-icon:hover {
+    cursor: pointer;
+    color: #f26b38;
+}
+.fbIcon:hover {
+    color:#3B5998;
+}
+.title::before {
+    content:"";
+    display: inline-block;
+    position: relative;
+    width:4px;
+    height:22px;
+    background-color: var(--orange-color);
+    margin-right: 10px;
+}
+.wrap-icon {
+    position: relative;
+    display: block;
+    img{
+        width: 150px;
+        height: 100%;
+        float: right;
+        transform: translate(60%, -300%);
+    }
+}
+.the-line::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+/*Footer line*/
+.footer-line {
+    p {
+        color: rgba(255, 255, 255, 0.5);
+        line-height: 22px;
+        padding: 20px 15px;
+        font-size: 14px;
+        font-style: italic;
+        display: inline-block;
+        font-weight: 300
+    }
+}
+.footer-line-icon{
+    display: inline-block;
+}
+
+@media screen and (max-width: 600px) {
+    .list-unstyled{
+        padding-left:20px;
+    }
+    .list-unstyled>ul{
+        li {
+            padding-left:10px;
+        }
+    }
+
+    .wrap-icon {
+        position: relative;
+        display: block;
+        padding-top: 30px;
+        max-width: 100%;
+        img{
+            width: 150px;
+            height: 100%;
+            transform: translate(-100%, 0);
+
+        }
+    }
+
+    .footer-line {
+        p {
+            padding: 0 10px;
+            margin: 0;
+        }
+    }
+    .footer-line-icon {
+        display: block;
+        padding: 20px 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .title-connect,
+    .connect-icons,
+    .download-icons {
+        margin-left: 20px;
+    }
+}

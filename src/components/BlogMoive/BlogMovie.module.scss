@@ -1,31 +1,68 @@
-
-/* line intro*/
-.title-blog{
-    color: #434846;
+.blog {
+  display: flex;
+}
+.blog-img {
+  margin-right: 20px;
+}
+//Description
+h5 {
+  a {
     font-size: 1.8rem;
-    text-transform: uppercase;
-    position: relative;
-    h3::after{
-        content:"";
-        display: block;
-        width: 50px;
-        height: 2px;
-        background-color: var(--orange-color);
-        margin: 10px 0;
-    }
+    line-height: 22px;
+    color: #43464b;
+  }
 }
-.title-blog:hover {
-    h3 {
-        color: var(--orange-color)
-    }
+h5:hover > a,
+h5.active > a {
+  color: var(--orange-color);
 }
-
+.likes,
+.views,
+.star {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  padding-right: 5px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+.likes {
+  width: 90px;
+  background-color: #1877f2;
+  color: var(--primary);
+  border-radius: 3px;
+}
+.views {
+  width: 64px;
+  background-color: #e9edf1;
+  color: #717273;
+  border-radius: 3px;
+}
+.star {
+  svg {
+    color: #fac917;
+    font-size: 1.8rem;
+  }
+}
+.blog-content {
+  max-width: 100%;
+  padding: 10px 10px 0 0;
+  color: var(--VN-color-text);
+  font-size: 1.4rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  span {
+    font-style: italic;
+    margin-right: 5px;
+  }
+}
 @media screen and (max-width: 600px) {
-    .title-blog {
-        margin-top: 20px;
-    }
-    .blog-content {
-        display: none;
-    }
-    
+  .title-blog {
+    margin-top: 20px;
+  }
+  .blog-content {
+    display: none;
+  }
 }

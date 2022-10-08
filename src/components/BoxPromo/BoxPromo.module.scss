@@ -1,0 +1,23 @@
+//Form promotion
+.box-promotion {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 20px 16px;
+  margin-top: 30px;
+  input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+}
+.form-promotion {
+  display: block;
+}
+.form-btn {
+  button {
+    width: 100%;
+    margin-bottom: 5px;
+    position: relative;
+    bottom: -35px;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,88 @@
+///BlogBox no-rate
+.artical-movie {
+  background-size: cover;
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.artical-movie:hover .overlay {
+  display: block;
+}
+.content, .title {
+  margin:20px;
+  color: var(--primary);
+  font-size: 2rem;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 1.5em;
+}
+.content {
+  padding-bottom: 10px;
+  font-size: 1.4rem;
+}
+.rate {
+  max-width: 100%;
+  position: relative;
+  top: 30%;
+  span {
+    padding: 0 5px;
+    background-color: var(--orange-color);
+    color: var(--primary);
+  }
+}
+//Button
+button > span {
+  text-transform: uppercase;
+}
+.xs {
+  width: 220px;
+  height: 147px;
+}
+//sub menu header
+.sm {
+  width: calc(var(--submenu-movie) / 4);
+  height: 138px;
+}
+//tabpane
+.md {
+  height: 265px;
+}
+//sale no-rate
+.lg {
+  width: 289px;
+  height: 437px;
+}
+//blog col 
+.blog {
+  width: 180px;
+  height: 275px;
+}
+//responsive
+@media screen and (max-width: 600px) {
+  .xs {
+    max-width: 120px;
+    max-height: 80px;
+    margin-right: 10px;
+  }
+  .sm {
+    max-width: 120px;
+    max-height: 80px;
+    margin-right: 10px;
+  }
+  .lg {
+    max-height: 316px;
+    max-width: 100%;
+  }
+  .md {
+    height: 120px;
+  }
+}

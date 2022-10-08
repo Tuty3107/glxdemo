@@ -1,40 +1,50 @@
 @import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;1,100;1,300;1,400&display=swap");
-
 :root {
-    --primary: #ffffff;
-    --nav-color: #000000;
-    --orange-color: #f26b38;
-    --text-color: #a0a3a7;
-    --VN-color-text:#a4a7ab;
-    --EN-color-text:#515459;
-    --footer-bg-color:#1a1a1a;
+  --primary: #ffffff;
+  --nav-color: #000000;
+  --orange-color: #f26b38;
+  --text-color: #a0a3a7;
+  --VN-color-text: #a4a7ab;
+  --EN-color-text: #515459;
+  --footer-bg-color: #1a1a1a;
 
-    --container-width: 1280px;
-    --submenu-movie: calc((var(--container-width) /7) *6);
+  --container-width: 1280px;
+  --submenu-movie: calc((var(--container-width) / 7) * 6);
+  --select-width: 380px;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 html {
-    font-size: 62.5%;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
-    font-family: "Roboto", sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    overflow-x: hidden;
+  overflow-x: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
 }
-ul, li, ol {
-    padding: 0;
-    margin: 0;
+ul, li, ol, a, link, h3, p{
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--text-color);
+}
+@media screen and (max-width: 400px) {
+  body {
+    overflow-x: hidden;
+  }
 }

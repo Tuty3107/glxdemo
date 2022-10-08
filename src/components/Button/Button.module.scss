@@ -1,56 +1,55 @@
 .wrapper {
-    display: inline-block;
-    position: relative;
-    background-color: transparent;
-    color: var(--primary);
-    text-align: center;
-    top: 50%;
-    transform: translate(0, -50%);
-    border:1px solid var(--primary);
-    cursor: pointer;  
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  color: var(--primary);
+  text-align: center;
+  top: 50%;
+  transform: translate(0, -50%);
+  border: 1px solid var(--primary);
+  cursor: pointer;
 }
 /*btn type*/
 .primary {
+  color: var(--primary);
+  border-color: var(--primary);
+  &:hover {
     color: var(--primary);
-    border-color: var(--primary);
-    &:hover {
-        color: var(--primary);
-        border-color: var(--orange-color);
-        background-color: var(--orange-color);
-    } 
+    border-color: var(--orange-color);
+    background-color: var(--orange-color);
+  }
 }
 .colorBorder {
+  border-color: var(--orange-color);
+  color: var(--orange-color);
+  &:hover {
+    text-decoration: none;
+    color: var(--primary);
     border-color: var(--orange-color);
-    color: var(--orange-color);
-    &:hover {
-        text-decoration: none;
-        color: var(--primary);
-        border-color: var(--orange-color);
-        background-color: var(--orange-color);
-    } 
+    background-color: var(--orange-color);
+  }
 }
 .colorBg {
-    border-color: var(--orange-color);
-    color: var(--primary);
-    background-color: var(--orange-color);
+  border-color: var(--orange-color);
+  color: var(--primary);
+  background-color: var(--orange-color);
 }
-
 /*btn size*/
-.small{
-    width: 90px;
-    height: 36px;
-    padding: 5px 0;
+.small {
+  width: 90px;
+  height: 36px;
+  padding: 5px 0;
 }
 .medium {
-    width: 120px;
-    height: 46px;
-    padding: 10px 0
+  width: 120px;
+  height: 46px;
+  padding: 10px 0;
 }
 .large {
-    width: 125px;
-    height: 46px;
+  width: 125px;
+  height: 46px;
 }
 .xl {
-    width: 146px;
-    height: 46px;
+  width: 146px;
+  height: 46px;
 }

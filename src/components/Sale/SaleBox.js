@@ -1,22 +1,19 @@
-import styles from './Sale.module.scss';
+import React from "react";
 import classNames from "classnames/bind";
-
-import saleData from './SaleData';
-import SaleBox from '../SaleBox';
+import styles from "./Sale.module.scss";
+import TitleLine from "../TitleLine/TitleLine";
+import useFirestore from "~/hooks/useFirestore";
+import SaleItems from "./SaleItems";
 
 const cx = classNames.bind(styles);
-
 function Sale() {
+  const sales = useFirestore("sales");
   return (
-    <div>
-        <section className={cx("promotion")}>
-            <a href="#" className={cx("title-blog")}>
-                <h3>Tin khuyến mãi</h3>
-            </a>
-            <SaleBox item={saleData} />
-        </section>
-    </div>
-  )
+    <section className={cx("promotion")}>
+      <TitleLine>Tin khuyến mãi</TitleLine>
+      <SaleItems items={sales} text="Chi tiết" folder={"/promotion"} />
+    </section>
+  );
 }
 
-export default Sale
+export default Sale;

@@ -29,8 +29,6 @@
         animation: changeColor .5s linear forwards;
     }
 }
-.movie-tab-line-item:hover{
-}
 .movie-tab-active {
     position: relative;
     bottom: -12px;
@@ -71,10 +69,12 @@
 }
 
  @media screen and (max-width: 600px) {
-
-        .artical-movie {
-            width: 190px !important;
-            height: 316px !important;
-        }  
+    body {
+        overflow-x: hidden;
+    }
+    .artical-movie {
+        width: 190px !important;
+        height: 316px !important;
+    }  
     
  }

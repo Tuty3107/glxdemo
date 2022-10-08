@@ -1,0 +1,84 @@
+/*Login*/
+.text-heading {
+  color: var(--text-color);
+}
+.inp {
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  position: relative;
+  height: 40px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #ced0da;
+  color: #43464b;
+  padding: 10px;
+  margin: 14px 0;
+}
+.login-remember {
+  font-size: 14px;
+  color: var(--text-color);
+  text-align: left;
+  a {
+    cursor: pointer;
+  }
+}
+.icon {
+  margin-right: 5px;
+}
+.icon-fb {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+ }
+ .icon-fb {
+  background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+}
+.icon-fb:hover {
+  cursor: pointer;
+  background-position: right center; /* change the direction of the change here */
+}
+.btn-form {
+  position: relative;
+  margin-top: 40px;
+  button {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 15px;
+    line-height: 1;
+  }
+}
+/*Sign In*/
+.capcha-wrap {
+  display: flex;
+}
+.capcha-refesh {
+  margin: 18px 5px;
+  svg {
+    width: 26px;
+    height: 26px;
+    color: var(--text-color);
+  }
+}
+.policy {
+  color: var(--text-color);
+  line-height: 1;
+  padding: 10px 0;
+  font-size: 1.4rem;
+  a {
+    color: var(--orange-color) !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  
+}

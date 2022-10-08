@@ -1,0 +1,13 @@
+.content-seo {
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 1.4rem;
+}
+@media screen and (max-width: 600px) {
+    .content-seo {
+        padding: 0 15px;
+    }
+}

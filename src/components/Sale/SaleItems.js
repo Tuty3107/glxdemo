@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import { Row, Col } from "react-bootstrap";
 import ArtImg from "../ArticleImg";
 
-function SaleItems({items, folder, text}) {
+function SaleItems({items, folder}) {
   let columns = [];
   items.forEach((movie, i) => {
     if (((i + 3) * 3) % 3 === 0) {
@@ -35,4 +36,8 @@ function SaleItems({items, folder, text}) {
   return <Row style={{ width: "100%" }}>{columns}</Row>;
 }
 
+SaleItems.propsType = {
+  items: PropTypes.array, 
+  folder: PropTypes.string,
+}
 export default SaleItems;

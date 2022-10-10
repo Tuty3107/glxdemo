@@ -1,11 +1,12 @@
+import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-import Tippy from "@tippyjs/react/headless";
+import HeadlessTippy from "@tippyjs/react/headless";
 import { Link } from "react-router-dom";
 import styles from "./Submenu.module.scss";
 import { Wrapper as WrapSubMenu } from "~/components/Wrapper";
 
 const cx = classNames.bind(styles);
-function Submenu({ children, items = [], onClick }) {
+function Submenu({ children, items, onClick }) {
   const renderItem = () => {
     return (
       <li className={cx("sub-menu")}>
@@ -22,18 +23,25 @@ function Submenu({ children, items = [], onClick }) {
     );
   };
   return (
-    <Tippy
+    <HeadlessTippy
+      appendTo={() => document.body}
       interactive
       placement="bottom-end"
       render={(attrs) => (
-        <div tabIndex="-1" {...attrs}>
+        <div tabIndex="-1" {...attrs} 
+          style={{position: 'relative', top: '-10px'}}>
           <WrapSubMenu>{renderItem()}</WrapSubMenu>
         </div>
       )}
     >
       {children}
-    </Tippy>
+    </HeadlessTippy>
   );
 }
 
+Submenu.propTypes = {
+  children: PropTypes.node.isRequired,
+  items: PropTypes.array.isRequired,
+  onClick: PropTypes.func,
+};
 export default Submenu;

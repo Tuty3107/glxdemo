@@ -17,7 +17,6 @@ import styles from "./Blog.module.scss";
 import BoxPromo from "~/components/BoxPromo/BoxPromo";
 import ArticleImg from "~/components/ArticleImg";
 import ColShowing from "~/components/ColShowing";
-import Select from "~/components/Select";
 import QBInner from "~/components/QuickBoxTicket/QBInner";
 
 const cx = classNames.bind(styles);

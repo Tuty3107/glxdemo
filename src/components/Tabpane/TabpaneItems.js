@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import classNames from "classnames/bind";
 import { Row, Col } from "react-bootstrap";
 import ArtImg from "../ArticleImg";
 import styles from "./Tabpane.module.scss";
 const cx = classNames.bind(styles);
 
-function TabpaneItems({items}) {
+function TabpaneItems({ items }) {
   let columns = [];
   items.forEach((movie, i) => {
     if ((i + 1) % 4 === 0) { columns.push(
@@ -41,4 +42,7 @@ function TabpaneItems({items}) {
   </Row>
 )}
 
+TabpaneItems.propTypes = {
+  items: PropTypes.array.isRequired
+}
 export default TabpaneItems;

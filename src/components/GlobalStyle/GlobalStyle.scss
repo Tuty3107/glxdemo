@@ -21,9 +21,12 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 body {
   overflow-x: hidden;
+  position: relative;
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1.5;

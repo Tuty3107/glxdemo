@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./QuickBoxTicket.module.scss";
-import { useFirestore }  from "~/hooks";
+import { useFirestore } from "~/hooks";
 import { db } from "~/firebase/config";
 import { collection, onSnapshot } from "firebase/firestore";
 import Select from "../Select";
@@ -27,18 +27,18 @@ function QBInner() {
       }));
       setCine(cinemas);
     });
-    setFilmLabel(film)
+    setFilmLabel(film);
   };
   const pickSession = (cineName) => {
     const cineUserPick = cine.find((cine) => cineName === cine.id);
     const keysTime = Object.keys(cineUserPick.day);
     setDays(keysTime);
     setTimes(cineUserPick);
-    setcineLabel(cineName)
+    setcineLabel(cineName);
   };
   const pickTime = (value) => {
     setShowtime(times.day[value]);
-    settimesLabel(value)
+    settimesLabel(value);
   };
   return (
     <>

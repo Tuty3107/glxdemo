@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import axios from "axios";
 import Tippy from "@tippyjs/react/headless";
 import classNames from "classnames/bind";
+
 import styles from "./Search.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "~/components/Wrapper";
 import { useDebounce } from '~/hooks';
@@ -17,12 +18,18 @@ function Search() {
 
   const FetchValue = async () => {
     setSearchresult([])
+  
     const res = await axios.get(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(search)}&sfw&limit=3`);
-    setSearchresult(res.data.data);
+    console.log(res.data.data)
+    //setSearchresult(res.data.data);
   };
 
   React.useEffect(() => {
-    FetchValue();
+    const timerID = setTimeout(() => {
+      FetchValue();
+    }, 1000)
+
+    return () => clearTimeout(timerID)
   }, [search]);
 
   return (

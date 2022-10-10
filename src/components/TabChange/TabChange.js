@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import classNames from "classnames/bind";
 import styles from "./TabChange.module.scss";
 import { Tab, Nav } from "react-bootstrap";
@@ -27,4 +28,11 @@ function TabChange({ text1, text2, text3, content1, content2 }) {
   );
 }
 
+TabChange.propsTypes = {
+  text1: PropTypes.string,
+  text2: PropTypes.string,
+  text3: PropTypes.string,
+  content1: PropTypes.node,
+  content2: PropTypes.node
+}
 export default TabChange;

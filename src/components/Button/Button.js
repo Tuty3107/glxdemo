@@ -1,3 +1,5 @@
+import React from "react";
+import PropTypes from "prop-types";
 import classNames from "classnames/bind";
 import styles from "./Button.module.scss";
 import { Link } from "react-router-dom";
@@ -5,10 +7,16 @@ import { Link } from "react-router-dom";
 const cx = classNames.bind(styles);
 
 function Button({
-  to, href, children,
+  to,
+  href,
+  children,
   primary = false,
-  small = false, medium = false, large = false, xl = false,
-  colorBorder = false, colorBg = false,
+  small = false,
+  medium = false,
+  large = false,
+  xl = false,
+  colorBorder = false,
+  colorBg = false,
 }) {
   let Comp = "button";
   const props = {};
@@ -23,8 +31,12 @@ function Button({
 
   const classes = cx("wrapper", {
     primary,
-    xl, large, medium, small,
-    colorBorder, colorBg,
+    xl,
+    large,
+    medium,
+    small,
+    colorBorder,
+    colorBg,
   });
   return (
     <Comp className={classes} {...props}>
@@ -33,4 +45,16 @@ function Button({
   );
 }
 
+Button.propsTypes = {
+  to: PropTypes.string.isRequired,
+  href: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  primary: PropTypes.bool,
+  small: PropTypes.bool,
+  medium: PropTypes.bool,
+  large: PropTypes.bool,
+  xl: PropTypes.bool,
+  colorBorder: PropTypes.bool,
+  colorBg: PropTypes.bool,
+};
 export default Button;

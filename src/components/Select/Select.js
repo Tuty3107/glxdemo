@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import classNames from "classnames/bind";
 import styles from "./Select.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
-function Select({ children, onChange, label}) {
+function Select({ children, onChange, label }) {
 
   return (
     <form className={cx("form-select")}>
@@ -26,4 +27,9 @@ function Select({ children, onChange, label}) {
   );
 }
 
+Select.prototypes = {
+  children: PropTypes.node.isRequired, 
+  onChange: PropTypes.func, 
+  label: PropTypes.string.isRequired
+}
 export default Select;

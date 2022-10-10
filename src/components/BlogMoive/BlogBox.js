@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 import classNames from "classnames/bind";
 import styles from "./BlogMovie.module.scss";
 import { Link } from "react-router-dom";
@@ -39,4 +40,10 @@ function BlogBox({ src, preview, content, to }) {
   );
 }
 
+BlogBox.propTypes = {
+  src: PropTypes.string.isRequired,
+  preview: PropTypes.string,
+  content: PropTypes.string,
+  to: PropTypes.string.isRequired
+}
 export default BlogBox;

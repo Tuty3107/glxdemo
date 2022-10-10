@@ -1,7 +1,7 @@
 import React from "react";
 import TabChange from "../TabChange/TabChange";
 import TabpaneItems from "./TabpaneItems";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 
 function Tabpane() {
   const movies = useFirestore("films");

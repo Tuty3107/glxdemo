@@ -12,7 +12,7 @@ import {
 import { useParams } from "react-router-dom";
 import Button from "~/components/Button";
 import TitleLine from "~/components/TitleLine";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import ArticleImg from "~/components/ArticleImg";
 import ColShowing from "~/components/ColShowing/ColShowing";
 import QuickBoxTicket from "~/components/QuickBoxTicket";

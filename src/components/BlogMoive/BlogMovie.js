@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
 import BlogBox from "./BlogBox";
-import useFirestore from "../../hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import TitleLine from "../TitleLine";
 
 function BlogMovie() {

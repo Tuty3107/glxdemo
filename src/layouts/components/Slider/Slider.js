@@ -9,14 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Navigation, Pagination, Autoplay } from "swiper";
 import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import QuickBoxTicket from "~/components/QuickBoxTicket";
-import useFireSore from "~/hooks/useFirestore";
+import { useFirestore } from "~/hooks"
 import { Wrapper } from "~/components/Wrapper";
 
 const cx = classNames.bind(styles);
 function Slider() {
   const swiperNavPrevRef = useRef(null);
   const swiperNavNextRef = useRef(null);
-  const sliders = useFireSore("carousel");
+  const sliders = useFirestore("carousel");
   const slides = sliders.map((i) => i.src);
 
   return (

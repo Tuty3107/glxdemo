@@ -12,7 +12,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "~/components/Button";
 import TitleLine from "~/components/TitleLine";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import styles from "./Blog.module.scss";
 import BoxPromo from "~/components/BoxPromo/BoxPromo";
 import ArticleImg from "~/components/ArticleImg";

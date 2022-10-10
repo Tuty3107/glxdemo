@@ -4,7 +4,7 @@ import styles from "./Schedule.module.scss";
 import { Container } from "react-bootstrap";
 import ContentCeo from "~/layouts/components/ContentCeo";
 import TabChange from "~/components/TabChange/TabChange";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import SaleItems from "~/components/Sale/SaleItems";
 
 const cx = classNames.bind(styles);

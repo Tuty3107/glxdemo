@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import ArtImg from "~/components/ArticleImg/ArtImg";
 import styles from "./Navbar.module.scss";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import Submenu from "../Submenu";
 
 const cx = classNames.bind(styles);

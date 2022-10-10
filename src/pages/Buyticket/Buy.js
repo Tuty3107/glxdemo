@@ -4,7 +4,7 @@ import styles from "./Buyticket.module.scss";
 import { Container, Row, Col } from "react-bootstrap";
 import Buyticket from "./Buyticket";
 import { useParams } from "react-router-dom";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import BoxPromo from "~/components/BoxPromo";
 import ColShowing from "~/components/ColShowing/ColShowing";
 import TitleLine from "~/components/TitleLine";

@@ -7,23 +7,22 @@ import styles from "./Search.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import { Wrapper as PopperWrapper } from "~/components/Wrapper";
+import { useDebounce } from '~/hooks';
 
 const cx = classNames.bind(styles);
 function Search() {
   const [search, setSearch] = useState(" ");
   const [searchResult, setSearchresult] = useState([]);
+  const debounced = useDebounce(searchResult, 500);
 
   const FetchValue = async () => {
-    const res = await axios.get(`https://api.jikan.moe/v4/anime?q=${search}&sfw&limit=3`);
+    setSearchresult([])
+    const res = await axios.get(`https://api.jikan.moe/v4/anime?q=${encodeURIComponent(search)}&sfw&limit=3`);
     setSearchresult(res.data.data);
   };
 
   React.useEffect(() => {
-    const timerId = setTimeout(() => {
-      FetchValue();
-    })
-
-    return () => clearTimeout(timerId)
+    FetchValue();
   }, [search]);
 
   return (

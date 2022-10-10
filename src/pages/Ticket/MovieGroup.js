@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Row, Col } from "react-bootstrap";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import { db } from "~/firebase/config";
 import { collection, onSnapshot } from "firebase/firestore";
 import classNames from "classnames/bind";

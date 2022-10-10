@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./QuickBoxTicket.module.scss";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 
 const cx = classNames.bind(styles);
 function TitleBuyTicket() {

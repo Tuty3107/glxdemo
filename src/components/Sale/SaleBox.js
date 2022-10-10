@@ -2,7 +2,7 @@ import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Sale.module.scss";
 import TitleLine from "../TitleLine/TitleLine";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import SaleItems from "./SaleItems";
 
 const cx = classNames.bind(styles);

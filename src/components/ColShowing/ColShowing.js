@@ -1,5 +1,5 @@
 import React from "react";
-import useFirestore from "~/hooks/useFirestore";
+import { useFirestore }  from "~/hooks";
 import TitleLine from "../TitleLine";
 import ArticleImg from "../ArticleImg";
 

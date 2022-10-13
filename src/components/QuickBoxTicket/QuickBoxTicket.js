@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "~/components/Button";
 import TitleBuyTicket from "./TitleBuyTicket";
 import QBInner from "./QBInner";
+import { StoreProvider } from "~/store";
 
 const cx = classNames.bind(styles);
 function QuickBoxTicket() {
@@ -17,7 +18,9 @@ function QuickBoxTicket() {
       </div>
       <section className={cx("box-ticket-inner")}>
         <TitleBuyTicket />
-        <QBInner />
+        <StoreProvider>
+          <QBInner />
+        </StoreProvider>
       </section>
       <div className={cx("btn-buy")}>
         <Button colorBg large>

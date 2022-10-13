@@ -54,13 +54,8 @@
   -webkit-appearance: none;
 }
 @media screen and (max-width: 600px) {
-  .form-select {
+  .btn-select-value, .btn-select-arrow {
     font-size: 1rem;
-    margin-bottom: 20px;
-    border: 1px solid black;
-  }
-  .btn-select-value,
-  .btn-select-arrow {
-    color: var(--nav-color);
+    color: #ffffff;
   }
 }

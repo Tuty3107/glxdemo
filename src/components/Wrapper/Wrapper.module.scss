@@ -1,11 +1,10 @@
 .wrapper {
-  width:100%;
+  width: 100%;
   max-width: 100%;
   height: auto;
   color: #fff;
   margin-top: 0;
   position: relative;
-
 }
 //For Quick box
 .bg333 {
@@ -18,16 +17,16 @@
   position: absolute;
   z-index: 1;
   right: 0;
-  top:0;
+  top: 0;
   margin: 30px 60px 0 0;
 }
 .bg000 {
   background-color: #f7f8f9;
   div {
-    *{
+    * {
       color: var(--nav-color);
       border-bottom-color: var(--nav-color);
-      form > div > a > label {
+      form > div > a> label {
         background-color: rgba(0, 0, 0, 0.2);
       }
     }

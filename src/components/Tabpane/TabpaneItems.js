@@ -29,8 +29,6 @@ function TabpaneItems({ items }) {
           children="MUA VÉ"
           to={`/buyticket/${movie.vnTit}`}
           url={process.env.PUBLIC_URL + `/img/${movie.tabpaneUrl}`}
-          entitle={movie.vnTit}
-          vntitle={movie.enTit}
         />
         <h3 className={cx("vnTit")}>{movie.vnTit}</h3>
         <h3 className={cx("enTit")}>{movie.enTit}</h3>

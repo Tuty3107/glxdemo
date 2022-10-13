@@ -12,11 +12,11 @@ import {
 import { useParams } from "react-router-dom";
 import Button from "~/components/Button";
 import TitleLine from "~/components/TitleLine";
-import { useFirestore }  from "~/hooks";
+import { useFirestore } from "~/hooks";
 import ArticleImg from "~/components/ArticleImg";
 import ColShowing from "~/components/ColShowing/ColShowing";
 import QuickBoxTicket from "~/components/QuickBoxTicket";
-import  {Wrapper } from "~/components/Wrapper";
+import { Wrapper } from "~/components/Wrapper";
 import SaleItems from "../../components/Sale/SaleItems";
 
 const cx = classNames.bind(styles);
@@ -54,7 +54,7 @@ function Sale() {
                   <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
                   0.0/10 (0)
                 </li>
-                <li>
+                <li className={cx("btn-rating")}>
                   <Button md colorBg>
                     Đánh giá
                   </Button>
@@ -72,22 +72,19 @@ function Sale() {
               <TitleLine>Bài viết liên quan</TitleLine>
               <Row className={cx("ralated")}>
                 <ul className={cx("related-post")}>
-                  {sales && sales.map((item, index) => (
-                    <li key={index}>
-                      <FontAwesomeIcon icon={faArrowRight} />
-                      <a href="#">{item.content}</a>
-                    </li>
-                  ))}
+                  {sales &&
+                    sales.map((item, index) => (
+                      <li key={index}>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                        <a href="#">{item.content}</a>
+                      </li>
+                    ))}
                 </ul>
               </Row>
             </section>
             <section id="relatedpost">
-              <Row className={cx("related")}>
-                <TitleLine>Khuyến mãi khác</TitleLine>
-                <div className={cx("saleItem")}>
-                  <SaleItems items={showItems} folder="/promotion"/>
-                </div>
-              </Row>
+              <TitleLine>Khuyến mãi khác</TitleLine>
+              <SaleItems items={showItems} folder="/promotion" />
             </section>
           </Col>
           <Col md={4} sm={4} xs={12}>

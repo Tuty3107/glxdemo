@@ -68,6 +68,9 @@ button > span {
 }
 //responsive
 @media screen and (max-width: 600px) {
+  .content, .title {
+    font-size: 1.2rem;
+  }
   .xs {
     max-width: 120px;
     max-height: 80px;

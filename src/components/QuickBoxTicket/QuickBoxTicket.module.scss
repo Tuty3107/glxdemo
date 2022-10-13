@@ -44,7 +44,7 @@
   border-bottom: 2px solid var(--primary);
 }
 input:checked ~ label {
-  border-bottom: 2px solid #f26b38;
+  border-bottom: 2px solid var(--orange-color);
   color: var(--orange-color);
 }
 //Group select
@@ -79,9 +79,6 @@ input:checked ~ label {
     text-overflow: ellipsis;
     overflow: hidden;
   }
-}
-.istOption {
-  pointer-events: none;
 }
 
 @media screen and (max-width: 600px) {

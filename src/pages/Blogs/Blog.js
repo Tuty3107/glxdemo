@@ -12,11 +12,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import Button from "~/components/Button";
 import TitleLine from "~/components/TitleLine";
-import { useFirestore }  from "~/hooks";
+import { useFirestore } from "~/hooks";
 import styles from "./Blog.module.scss";
 import BoxPromo from "~/components/BoxPromo/BoxPromo";
 import ArticleImg from "~/components/ArticleImg";
 import ColShowing from "~/components/ColShowing";
+import { StoreProvider } from "~/store";
 import QBInner from "~/components/QuickBoxTicket/QBInner";
 
 const cx = classNames.bind(styles);
@@ -42,7 +43,9 @@ function Blog() {
     <div style={{ marginTop: "50px" }}>
       <Container fluid className={cx("boxquick-header")}>
         <section className={cx("box-ticket-inner")}>
-          <QBInner />
+          <StoreProvider>
+            <QBInner />
+          </StoreProvider>
         </section>
       </Container>
       <Container style={{ marginTop: "50px" }}>
@@ -64,7 +67,7 @@ function Blog() {
                   <FontAwesomeIcon icon={faStar}></FontAwesomeIcon>
                   0.0/10 (0)
                 </li>
-                <li>
+                <li className={cx("btn-rating")}>
                   <Button md colorBg>
                     Đánh giá
                   </Button>
@@ -79,46 +82,44 @@ function Blog() {
             <div className={cx("content-tags")}>
               <FontAwesomeIcon icon={faTags} />
               <ul className={cx("text-tags")}>
-                {tags[0] && tags[0].name.map((tag, index) => 
-                  <li key={index}>{tag}</li>
-                )}
+                {tags[0] &&
+                  tags[0].name.map((tag, index) => <li key={index}>{tag}</li>)}
               </ul>
             </div>
             <section id="relatedpost">
               <TitleLine>Bài viết liên quan</TitleLine>
               <Row className={cx("ralated")}>
                 <ul className={cx("related-post")}>
-                  {blogs && blogs.map((blog, index) => (
-                    <li key={index}>
-                      <FontAwesomeIcon icon={faArrowRight} />
-                      <a href="#">{blog.preview}</a>
-                    </li>
-                  ))}
+                  {blogs &&
+                    blogs.map((blog, index) => (
+                      <li key={index}>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                        <a href="#">{blog.preview}</a>
+                      </li>
+                    ))}
                 </ul>
               </Row>
             </section>
             <section id="relatedpost">
-              <Row className={cx("related")}>
-                {blog && (
-                  <>
-                    <TitleLine>
-                      {blog.cmtpart === false
-                        ? "Bình luận phim"
-                        : "Blog điện ảnh"}
-                    </TitleLine>
-                    {items.map((item, idx) => (
-                      <ArticleImg
-                        key={idx}
-                        blog
-                        btn
-                        children="CHI TIẾT"
-                        to={`/buyticket/${item.vnTit}`}
-                        url={process.env.PUBLIC_URL + `/blogImg/${item.src}`}
-                      />
-                    ))}
-                  </>
-                )}
-              </Row>
+              {blog && (
+                <Row className={cx("related")}>
+                  <TitleLine>
+                    {blog.cmtpart === false
+                      ? "Bình luận phim"
+                      : "Blog điện ảnh"}
+                  </TitleLine>
+                  {items.map((item, idx) => (
+                    <ArticleImg
+                      key={idx}
+                      blog
+                      btn
+                      children="CHI TIẾT"
+                      to={`/buyticket/${item.vnTit}`}
+                      url={process.env.PUBLIC_URL + `/blogImg/${item.src}`}
+                    />
+                  ))}
+                </Row>
+              )}
             </section>
           </Col>
           <Col lg={4} md={4} sm={12} xs={12}>

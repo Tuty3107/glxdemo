@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 const cx = classNames.bind(styles);
-function Select({ children, onChange, label }) {
+function Select({ children, onChange, onClick, label }) {
 
   return (
     <form className={cx("form-select")}>
@@ -18,7 +18,8 @@ function Select({ children, onChange, label }) {
           </span>
           <select name="options-select"
             className={cx("options-select")}
-            onChange={onChange}>
+            onChange={onChange}
+            onClick={onClick}>
               {children}
             </select>
         </a>

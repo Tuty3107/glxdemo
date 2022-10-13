@@ -12,8 +12,10 @@ export default function MovieGroup() {
   const [cine, setCine] = useState([]);
   const [days, setDays] = useState([]);
   const [items, setItem] = useState({});
-  
+
   const pickCinemas = (film) => {
+    setDays([])
+    setItem({})
     onSnapshot(collection(db, `/films/${film.id}/cinema`), (snap) => {
       const cinemas = snap.docs.map((doc) => ({
         ...doc.data(),
@@ -22,6 +24,8 @@ export default function MovieGroup() {
       setCine(cinemas);
     });
   };
+
+  
   const pickSession = (cine) => {
     const keysTime = Object.keys(cine.day);
     setDays(keysTime);

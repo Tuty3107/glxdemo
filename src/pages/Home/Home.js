@@ -18,7 +18,7 @@ function Home() {
   return (
     <>
       <Slider />
-      <Container style={{ marginBottom: "100px", marginTop: "100px" }}>
+      <Container style={{ marginBottom: "100px", marginTop: "50px" }}>
         <Row style={{ marginBottom: "100px" }}>
           <Col lg={12}>
             <div className={cx("tab-movie")}>

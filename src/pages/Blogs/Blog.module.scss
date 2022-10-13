@@ -95,7 +95,18 @@
 }
 
 @media screen and (max-width: 600px) {
+  .likes, .views {
+    height: 20px;
+  }
   .content-img {
     margin: 0;
+  }
+  .related {
+    article {
+      margin: 5px auto;
+    }
+  }
+  .btn-rating {
+    margin-top:20px;
   }
 }

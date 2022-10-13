@@ -50,11 +50,11 @@ ArtImg.propTypes = {
   lg: PropTypes.bool,
   xl: PropTypes.bool,
   btn: PropTypes.bool,
-  blog: PropTypes.string,
   rate: PropTypes.string,
   to: PropTypes.string,
   content: PropTypes.string,
   title: PropTypes.string,
+  blog: PropTypes.bool,
   children: PropTypes.node
 };
 

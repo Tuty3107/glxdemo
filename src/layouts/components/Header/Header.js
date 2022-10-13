@@ -15,24 +15,16 @@ function Header() {
   const user = localStorage.getItem("user");
   const [show, setShow] = useState(false);
 
-  //Show-Hide Modal
+  //Show-Hide Modal on the first use
   React.useEffect(() => {
     if (sessionStorage.getItem("registered")) {
-      setShow(false);
-      if (!user) {
-        const handleReload = window.addEventListener("load", () => {
-          sessionStorage.removeItem("registered");
-          setShow(true);
-        });
-
-        return () => {
-          window.removeEventListener("reload", handleReload);
-        };
-      }
-    } else if (!sessionStorage.getItem("registered")) {
       setShow(true);
+      sessionStorage.removeItem("registered");
+    } else if (!sessionStorage.getItem("registered")) {
       sessionStorage.setItem("registered", "true");
+      setShow(false);
     }
+  
   }, []);
 
   return (

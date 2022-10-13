@@ -53,3 +53,8 @@
   width: 146px;
   height: 46px;
 }
+@media screen and (max-width: 600px) {
+  .wrapper {
+    transform: translate(0, -100%);
+  }
+}

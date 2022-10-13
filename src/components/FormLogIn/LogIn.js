@@ -12,7 +12,6 @@ function LogIn() {
   const handleFbLogin = useContext(LoginContext);
   const handleSubmit = (e) => {
     e.preventDefault();
-    
   };
 
   return (
@@ -22,7 +21,7 @@ function LogIn() {
         nhiều ưu đãi từ chương trình thành viên Galaxy Cinema
       </p>
       <form>
-        <Field placeholder="Email" type="email"/>
+        <Field placeholder="Email" type="email" />
         <Field placeholder="Mật khẩu" type="password" />
         <div className={cx("login-remember")}>
           <a>Quên mật khẩu?</a>
@@ -31,8 +30,10 @@ function LogIn() {
           <FontAwesomeIcon icon={faFacebook} className={cx("icon")} />
           Log in with Facebook
         </div>
-        <div className={cx("btn-form")} onClick={(e) =>handleSubmit(e)}>
-          <Button lg colorBg>ĐĂNG NHẬP</Button>
+        <div className={cx("btn-form")} onClick={(e) => handleSubmit(e)}>
+          <Button lg colorBg>
+            ĐĂNG NHẬP
+          </Button>
         </div>
       </form>
     </>

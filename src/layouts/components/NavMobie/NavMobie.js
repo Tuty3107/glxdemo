@@ -10,15 +10,20 @@ import {
 import { Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import Search from "../Search";
+import UserInfo from "~/layouts/components/UserInfo";
+import FormLogIn from "~/components/FormLogIn";
 
 const cx = classNames.bind(styles);
 function NavMobie() {
+  const user = localStorage.getItem("user");
+  const [show, setShow] = useState(false);
   const [libActive, setLibActive] = useState("nav-mobie");
   const handleClick = () => {
     setLibActive(libActive === "nav-mobie" ? "sed-nav-mobie" : "nav-mobie");
   };
   return (
     <Container fluid className={cx("container")}>
+      <FormLogIn show={show} onHide={() => setShow(false)} />
       <Row className={cx("nav-mobie")}>
         <div className={cx("logo-mobie")}>
           <Link to="/">
@@ -30,12 +35,14 @@ function NavMobie() {
         </div>
         <div className={cx("secondary-nav-wrapper")}>
           <ul className={cx("secondary-nav")}>
-            <li>
-              <a className={cx("logoLink")} href="#">
+          {user ? (
+              <UserInfo />
+            ) : (
+              <li className={cx("logoLink")} onClick={() => setShow(true)}>
                 <FontAwesomeIcon icon={faUser} />
                 Đăng nhập
-              </a>
-            </li>
+              </li>
+            )}
             <li className={cx("btn-close-mobie")} onClick={handleClick}>
               <span></span>
               <span></span>

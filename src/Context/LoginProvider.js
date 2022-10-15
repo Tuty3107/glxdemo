@@ -5,7 +5,7 @@ import {
   getAdditionalUserInfo,
   signInWithPopup,
 } from "firebase/auth";
-import { serverTimestamp, addDoc, collection } from "firebase/firestore";
+import { addDoc, collection } from "firebase/firestore";
 
 const fbProvider = new FacebookAuthProvider();
 const LoginContext = React.createContext();
@@ -20,7 +20,6 @@ function LoginProvider({ children }) {
         displayName: auth.currentUser.displayName,
         photoURL: auth.currentUser.photoURL,
         providerId: auth.currentUser.providerId,
-        timestamp: serverTimestamp(),
       });
     }
   };

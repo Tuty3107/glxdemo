@@ -7,7 +7,7 @@ function TailerFilm({...props}) {
     <Modal {...props} size="md" centered >
       <Modal.Header closeButton>{props.title}</Modal.Header>
       <Modal.Body>
-        <iframe width="420" height="315" src={props.src}></iframe>
+        <iframe width="100%" height="315" src={props.src}></iframe>
       </Modal.Body>
     </Modal>
   );

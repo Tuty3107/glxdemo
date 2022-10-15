@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { auth } from "~/firebase/config";
 import { onAuthStateChanged } from "firebase/auth";
 
 const AuthContext = React.createContext();
 function AuthProvider({ children }) {
   const [user, setUser] = useState({});
-  let navigate = useNavigate();
   React.useEffect(() => {
     const unsubcibled = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -25,7 +23,9 @@ function AuthProvider({ children }) {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ user }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
 

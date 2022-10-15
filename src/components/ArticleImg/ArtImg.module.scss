@@ -14,8 +14,9 @@
 .artical-movie:hover .overlay {
   display: block;
 }
-.content, .title {
-  margin:20px;
+.content,
+.title {
+  margin: 20px;
   color: var(--primary);
   font-size: 2rem;
   text-transform: uppercase;
@@ -61,14 +62,15 @@ button > span {
   width: 289px;
   height: 437px;
 }
-//blog col 
+//blog col
 .blog {
   width: 180px;
   height: 275px;
 }
 //responsive
 @media screen and (max-width: 600px) {
-  .content, .title {
+  .content,
+  .title {
     font-size: 1.2rem;
   }
   .xs {

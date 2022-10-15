@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import LogIn from "./LogIn";
 import SignUp from "./SignUp";
 import TabChange from "../TabChange";
@@ -7,7 +7,7 @@ import Modal from "react-bootstrap/Modal";
 function FormLogIn(props) {
 
   return (
-    <Modal {...props} size="md" centered >
+    <Modal {...props} size="md" centered>
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body style={{ padding: "0 50px" }}>
         <TabChange

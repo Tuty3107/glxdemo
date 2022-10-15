@@ -25,7 +25,7 @@ function UserInfo() {
   return (
     <ul className={cx("user-info")}>
       <img src={photoURL} className={cx("avatar")} />
-      <li>{photoURL ? "" : displayName?.charAt(0).toUpperCase()}</li>
+      <li style={{color: '#333'}}>{photoURL ? "" : displayName?.charAt(0).toUpperCase()}</li>
       <Tippy
         interactive
         placement="left"

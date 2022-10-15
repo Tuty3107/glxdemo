@@ -25,7 +25,6 @@ function ColShowing() {
       {showItems.map((movie, index) => (
         <ArticleImg
           md
-          btn
           key={index}
           rate={movie.rate}
           children="MUA VÉ"

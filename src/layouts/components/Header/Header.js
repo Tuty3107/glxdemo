@@ -24,12 +24,13 @@ function Header() {
       sessionStorage.setItem("registered", "true");
       setShow(false);
     }
-  
   }, []);
+
+  const handleClose = () => setShow(false);
 
   return (
     <div className={cx("wrapper")}>
-      <FormLogIn show={show} onHide={() => setShow(false)} />
+      <FormLogIn show={show} onHide={handleClose} />
       <div className={cx("inner")}>
         <div className={cx("logo")}>
           <Link to="/">
@@ -37,23 +38,23 @@ function Header() {
           </Link>
         </div>
         <Search />
-        <div className={cx("primary-nav-wrapper")}>
-          <ul>
-            {user ? (
+        <ul className={cx("primary-nav-wrapper")}>
+          {user ? (
+            <li className={cx("userInfo")}>
               <UserInfo />
-            ) : (
-              <li className={cx("login")} onClick={() => setShow(true)}>
-                <FontAwesomeIcon icon={faUser} />
-                Đăng nhập
-              </li>
-            )}
-            <li className={cx("languages")}>
-              <a className={cx("VN")}>VN</a>
-              <span>|</span>
-              <a className={cx("EN")}>EN</a>
             </li>
-          </ul>
-        </div>
+          ) : (
+            <li className={cx("login")} onClick={() => setShow(true)}>
+              <FontAwesomeIcon icon={faUser} />
+              Đăng nhập
+            </li>
+          )}
+          <li className={cx("languages")}>
+            <a className={cx("VN")}>VN</a>
+            <span>|</span>
+            <a className={cx("EN")}>EN</a>
+          </li>
+        </ul>
       </div>
       <div className={cx("navbar")}>
         <Navbar1 />

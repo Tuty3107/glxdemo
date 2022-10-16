@@ -3,7 +3,7 @@ import { auth, db } from "~/firebase/config";
 import {
   FacebookAuthProvider,
   getAdditionalUserInfo,
-  signInWithPopup,
+  signInWithPopup
 } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
 

@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getAuth, connectAuthEmulator } from "firebase/auth";
-import { getFirestore, connectFirestoreEmulator } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBta7q4B3iBb6Sru-xLrQHuoyIFIF1fLCI",
@@ -10,12 +9,11 @@ const firebaseConfig = {
   storageBucket: "fir-47a5d.appspot.com",
   messagingSenderId: "283658302111",
   appId: "1:283658302111:web:006fcafe1290a0315068aa",
-  measurementId: "G-N7H6J792H2"
+  measurementId: "G-N7H6J792H2",
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const auth = getAuth();
 

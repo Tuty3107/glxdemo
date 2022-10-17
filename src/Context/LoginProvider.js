@@ -11,7 +11,6 @@ const fbProvider = new FacebookAuthProvider();
 const LoginContext = React.createContext();
 function LoginProvider({ children }) {
   const handleFbLogin = () => {
-    // const user = await signInWithPopup(auth, fbProvider);
     signInWithPopup(auth, fbProvider)
       .then((result) => {
         console.log(result);
@@ -26,11 +25,7 @@ function LoginProvider({ children }) {
             providerId: auth.currentUser.providerId,
           });
         }
-        const credential = FacebookAuthProvider.credentialFromResult(result);
       })
-      .catch((error) => {
-        console.log(error)
-      });
   };
   return (
     <LoginContext.Provider value={handleFbLogin}>

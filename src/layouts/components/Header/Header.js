@@ -13,19 +13,7 @@ import Search from "../Search/Search";
 const cx = classNames.bind(styles);
 function Header() {
   const user = localStorage.getItem("user");
-  const [show, setShow] = useState(false);
-
-  //Show-Hide Modal on the first use
-  React.useEffect(() => {
-    if (sessionStorage.getItem("registered")) {
-      setShow(true);
-      sessionStorage.removeItem("registered");
-    } else if (!sessionStorage.getItem("registered")) {
-      sessionStorage.setItem("registered", "true");
-      setShow(false);
-    }
-  }, []);
-
+  const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
 
   return (

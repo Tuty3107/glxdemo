@@ -43,7 +43,7 @@ function Slider() {
       >
         {slides[0] && slides[0].map((sliderItems, index) => (
           <SwiperSlide key={index} className={cx("swipperslide")}>
-            {<img src={process.env.PUBLIC_URL +`/sliderImg/${sliderItems}`} />}
+            {<img alt="" src={process.env.PUBLIC_URL +`/sliderImg/${sliderItems}`} />}
            </SwiperSlide>
         ))}
         <div className={cx("swipper-btn-prev")} ref={swiperNavPrevRef}>

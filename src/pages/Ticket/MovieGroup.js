@@ -43,9 +43,9 @@ export default function MovieGroup() {
             {films.map((film, index) => (
               <li key={index} className={cx("movie-items")}
                 onClick={() => pickCinemas(film)}>
-                <a className={cx("list-group-item-movie")}>
+                <div className={cx("list-group-item-movie")}>
                   <div className={cx("showtimes-row")}>
-                    <img src={process.env.PUBLIC_URL + `/img/${film.tabpaneUrl}`} />
+                    <img alt="filmImg" src={process.env.PUBLIC_URL + `/img/${film.tabpaneUrl}`} />
                     <div className={cx("title-movie")}>
                       <p className={cx("vn-title")}>{film.vnTit}</p>
                       <p className={cx("en-title")}>{film.enTit}</p>
@@ -54,7 +54,7 @@ export default function MovieGroup() {
                       <span className={cx("rate")}>{film.rate}</span>
                     )}
                   </div>
-                </a>
+                </div>
               </li>
             ))}
           </ul>

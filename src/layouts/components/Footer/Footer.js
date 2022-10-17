@@ -140,7 +140,7 @@ function Footer() {
           </Row>
           <Row>
             <div className={cx("wrap-icon")}>
-              <img src="https://www.galaxycine.vn/website/images/glx_trade.png"></img>
+              <img alt="" src="https://www.galaxycine.vn/website/images/glx_trade.png"></img>
             </div>
           </Row>
         </Container>
@@ -148,7 +148,7 @@ function Footer() {
           <Container className={cx("footer-line")}>
             <Row>
               <Col xs={12} sm={12} md={12} lg={12}>
-                <a href="" className={cx("footer-line-icon")}>
+                <a href="#" className={cx("footer-line-icon")}>
                   <img
                     src="https://www.galaxycine.vn/website/images/galaxy-logo-footer.png"
                     alt="Galaxy Cinema"

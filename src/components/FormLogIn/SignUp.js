@@ -85,7 +85,7 @@ function SignUp() {
       </Row>
       <p className={cx("policy")}>
         Tôi đã đọc và đồng ý với
-        <a> CHÍNH SÁCH</a> của chương trình
+        <a>CHÍNH SÁCH</a> của chương trình
       </p>
       <div className={cx("btn-form")}>
         <Button colorBg xl>

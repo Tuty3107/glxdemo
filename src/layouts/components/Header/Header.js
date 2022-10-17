@@ -22,7 +22,7 @@ function Header() {
       <div className={cx("inner")}>
         <div className={cx("logo")}>
           <Link to="/">
-            <img src="https://www.galaxycine.vn/website/images/galaxy-logo.png" />
+            <img alt="" src="https://www.galaxycine.vn/website/images/galaxy-logo.png" />
           </Link>
         </div>
         <Search />

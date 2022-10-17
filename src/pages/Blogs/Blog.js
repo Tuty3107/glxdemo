@@ -22,7 +22,6 @@ import QBInner from "~/components/QuickBoxTicket/QBInner";
 
 const cx = classNames.bind(styles);
 function Blog() {
-  const films = useFirestore("films");
   const [items, setItems] = useState([]);
   const tags = useFirestore("tags");
   const blog1 = useFirestore("/blogs/sNKbZ1oZm1p9nTmF2VtG/blog1");
@@ -32,7 +31,7 @@ function Blog() {
   const blog = blogs.find((blog) => params.blogId === blog.preview.toString());
 
   React.useEffect(() => {
-    if (blog && blog.cmtpart == true) {
+    if (blog && blog.cmtpart === true) {
       setItems(blog1);
     } else {
       setItems(blog2);
@@ -76,7 +75,7 @@ function Blog() {
             </div>
             <div className={cx("content-img")}>
               {blog && (
-                <img src={process.env.PUBLIC_URL + `/blogImg/${blog.src}`} />
+                <img alt="" src={process.env.PUBLIC_URL + `/blogImg/${blog.src}`} />
               )}
             </div>
             <div className={cx("content-tags")}>

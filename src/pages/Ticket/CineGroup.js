@@ -53,9 +53,9 @@ export default function CineGroup() {
             <ul key={index} className={cx("list-group")}>
               <li onClick={() => pickSession(film)}
                 className={cx("movie-items")}>
-                <a className={cx("list-group-item-movie")}>
+                <div className={cx("list-group-item-movie")}>
                   <div className={cx("showtimes-row")}>
-                    <img src={process.env.PUBLIC_URL + `/img/${film.src}`} />
+                    <img alt="filmImg" src={process.env.PUBLIC_URL + `/img/${film.src}`} />
                     <div className={cx("title-movie")}>
                       <p className={cx("vn-title")}>{film.vnTit}</p>
                       <p className={cx("en-title")}>{film.enTit}</p>
@@ -64,7 +64,7 @@ export default function CineGroup() {
                       <span className={cx("rate")}>{film.rate}</span>
                     )}
                   </div>
-                </a>
+                </div>
               </li>
             </ul>
           ))}

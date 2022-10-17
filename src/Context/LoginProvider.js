@@ -12,27 +12,24 @@ const LoginContext = React.createContext();
 function LoginProvider({ children }) {
   const handleFbLogin = () => {
     // const user = await signInWithPopup(auth, fbProvider);
-    // const { isNewUser } = getAdditionalUserInfo(user);
-    // if (isNewUser) {
-    //   await addDoc(collection(db, "users"), {
-    //     uid: auth.currentUser.uid,
-    //     email: auth.currentUser.email,
-    //     displayName: auth.currentUser.displayName,
-    //     photoURL: auth.currentUser.photoURL,
-    //     providerId: auth.currentUser.providerId,
-    //   });
-    // }
     signInWithPopup(auth, fbProvider)
       .then((result) => {
+        console.log(result);
         const user = result.user;
+        const { isNewUser } = getAdditionalUserInfo(user);
+        if (isNewUser) {
+          addDoc(collection(db, "users"), {
+            uid: auth.currentUser.uid,
+            email: auth.currentUser.email,
+            displayName: auth.currentUser.displayName,
+            photoURL: auth.currentUser.photoURL,
+            providerId: auth.currentUser.providerId,
+          });
+        }
         const credential = FacebookAuthProvider.credentialFromResult(result);
-        const accessToken = credential.accessToken;
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.customData.email;
-        const credential = FacebookAuthProvider.credentialFromError(error);
+        console.log(error)
       });
   };
   return (

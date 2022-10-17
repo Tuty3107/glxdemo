@@ -9,7 +9,7 @@ const imgEr = {
 export default function Notfound() {
   return (
     <div style={imgEr}>
-        <img src="https://www.galaxycine.vn/website/images/ic-404.png"/>
+        <img alt="" src="https://www.galaxycine.vn/website/images/ic-404.png"/>
     </div>
   )
 }

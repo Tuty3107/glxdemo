@@ -77,6 +77,13 @@
     }
   }
 }
+.sale-related-items>div>div {
+  article {
+    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
 //ticket box
 .box-ticket {
   background-color: rgba(255, 255, 255, 0.5);

@@ -24,7 +24,7 @@ function Home() {
             <div className={cx("tab-movie")}>
               <div className={cx("hotnews")}>
                 <FontAwesomeIcon icon={faFireAlt}></FontAwesomeIcon>
-                <a href="">Thor Tình Yêu Và Sấm Sét: Thần Sấm Sẽ Bị Thay Thế</a>
+                <a href="#">Thor Tình Yêu Và Sấm Sét: Thần Sấm Sẽ Bị Thay Thế</a>
               </div>
               <TabPane />
               <div className={cx("moreInfo-btn")}>

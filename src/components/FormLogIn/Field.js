@@ -8,7 +8,7 @@ function Field({ placeholder, type }) {
   const [value, setValue] = useState("");
   const [valid, setValid] = useState(false);
   const onBlur = (e) => {
-    if (value.length == 0) {
+    if (value.length === 0) {
       setValid(true);
     } else {
       setValid(false);

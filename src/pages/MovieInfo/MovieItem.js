@@ -43,7 +43,7 @@ function MovieItem({
           />
         <Col lg={6}>
           <div className={cx("poster")}>
-            <img src={process.env.PUBLIC_URL + `/schedule/${url}`} />
+            <img alt="" src={process.env.PUBLIC_URL + `/schedule/${url}`} />
             <div className={cx("play-bt")} onClick={trailerDisplay}>
               <FontAwesomeIcon icon={faPlayCircle} />
             </div>

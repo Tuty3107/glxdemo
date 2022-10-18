@@ -4,7 +4,7 @@ import styles from "./Header.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import UserInfo from "../UserInfo";
+import { UserSignIn } from "../UserInfo";
 import Navbar1 from "../Navbar";
 import NavMobie from "../NavMobie";
 import FormLogIn from "~/components/FormLogIn";
@@ -12,7 +12,9 @@ import Search from "../Search/Search";
 
 const cx = classNames.bind(styles);
 function Header() {
-  const user = localStorage.getItem("user");
+  const user = localStorage.getItem("userSignIn");
+
+  console.log(user)
   const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
 
@@ -29,7 +31,7 @@ function Header() {
         <ul className={cx("primary-nav-wrapper")}>
           {user ? (
             <li className={cx("userInfo")}>
-              <UserInfo />
+              <UserSignIn />
             </li>
           ) : (
             <li className={cx("login")} onClick={() => setShow(true)}>

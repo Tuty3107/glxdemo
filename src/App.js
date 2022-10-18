@@ -5,6 +5,7 @@ import DefaultLayout from "./layouts/DefaultLayout";
 import { publicRoutes } from "./routes";
 import AuthProvider from "~/Context/AuthProvider";
 import LoginProvider from "./Context/LoginProvider";
+import EmailPwProvider from "./Context/EmailPwProvider";
 
 function App() {
   return (
@@ -24,9 +25,11 @@ function App() {
                 element={
                   <LoginProvider>
                     <AuthProvider>
-                      <Layout>
-                        <Page />
-                      </Layout>
+                      <EmailPwProvider>
+                        <Layout>
+                          <Page />
+                        </Layout>
+                      </EmailPwProvider>
                     </AuthProvider>
                   </LoginProvider>
                 }

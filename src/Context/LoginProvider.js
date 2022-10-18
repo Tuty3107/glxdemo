@@ -13,7 +13,6 @@ function LoginProvider({ children }) {
   const handleFbLogin = () => {
     signInWithPopup(auth, fbProvider)
       .then((result) => {
-        console.log(result);
         const user = result.user;
         const { isNewUser } = getAdditionalUserInfo(user);
         if (isNewUser) {

@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import classNames from "classnames/bind";
+import { Alert } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Row, Col } from "react-bootstrap";
 import { faRefresh } from "@fortawesome/free-solid-svg-icons";
@@ -11,18 +12,22 @@ const cx = classNames.bind(styles);
 function SignUp() {
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState("");
+  const [valid, setValid] = useState(false);
+  const [valid1, setValid1] = useState(false);
   const valueSignIn = useContext(EmailPwContext);
   const handleSignIn = valueSignIn.handleSignIn;
-
   return (
     <>
       <form>
         <input
+          className={cx("inp")}
           value={emailUser}
           placeholder="Họ tên"
           type="name"
           onChange={(e) => setEmailUser(e.target.value)}
+          onBlur={() => {emailUser.length === 0 ? setValid(true) : setValid(false)}}
         />
+        {valid ? <Alert>Please fill out this field</Alert> : <></>}
         <Row className={cx("city")}>
           <Col lg={6} md={6} xs={6}>
             <Field placeholder="Số điện thoaị" />
@@ -41,11 +46,14 @@ function SignUp() {
         <Row className={cx("city")}>
           <Col lg={6} md={6} xs={6}>
             <input
+              className={cx("inp")}
               value={passwordUser}
               placeholder="Mật khẩu"
               type="Mật khẩu"
               onChange={(e) => setPasswordUser(e.target.value)}
+              onBlur={() => {emailUser.length === 0 ? setValid1(true) : setValid1(false)}}
             />
+            {valid1 ? <Alert>Please fill out this field</Alert> : <></>}
           </Col>
           <Col lg={6} md={6} xs={6}>
             <Field placeholder="Xác nhận mật khẩu" />
@@ -104,8 +112,11 @@ function SignUp() {
           Tôi đã đọc và đồng ý với
           <a> CHÍNH SÁCH </a> của chương trình
         </p>
-        <div className={cx("btn-form")} onClick={() => valusSignIn(emailUser, passwordUser)}>
-          <div>ĐĂNG KÝ</div>
+        <div
+          className={cx("btn-form", "icon-fb")}
+          onClick={() => handleSignIn(emailUser, passwordUser)}
+        >
+          ĐĂNG KÝ
         </div>
       </form>
     </>

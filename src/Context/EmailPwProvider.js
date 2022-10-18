@@ -5,33 +5,32 @@ import { addDoc, collection } from "firebase/firestore";
 
 const EmailPwContext = React.createContext();
 function EmailPwProvider({ children }) {
-  const [ userSignIn, setUserSignIn ] = useState({});
+  const [userSignIn, setUserSignIn] = useState({});
+
   const handleSignIn = (email = "", password = "") => {
-    console.log(email, password);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
         if (user) {
-          setUserSignIn(user);
+          const { email, photoURL } = user;
+          setUserSignIn({ email, photoURL });
           addDoc(collection(db, "usersSignIn"), {
             uid: auth.currentUser.uid,
             email: auth.currentUser.email,
             photoURL: auth.currentUser.photoURL,
           });
-          localStorage.setItem('userSignIn', userSignIn)
+          localStorage.setItem("userSignIn", userSignIn);
         }
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log("Error Code", error);
       });
   };
   const valusSignIn = {
     userSignIn,
-    handleSignIn
-  }
+    handleSignIn,
+  };
 
   return (
     <EmailPwContext.Provider value={valusSignIn}>

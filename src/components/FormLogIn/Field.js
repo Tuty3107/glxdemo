@@ -8,7 +8,7 @@ function Field({ placeholder, type }) {
   const [value, setValue] = useState("");
   const [valid, setValid] = useState(false);
 
-  const onBlur = (e) => {
+  const onBlur = () => {
     if (value.length === 0) {
       setValid(true);
     } else {
@@ -24,7 +24,7 @@ function Field({ placeholder, type }) {
         placeholder={placeholder}
         type={type}
         onChange={(e) => setValue(e.target.value)}
-        onBlur={(e) => onBlur(e)}
+        onBlur={() => onBlur()}
       />
       {valid ? <Alert>Please fill out this field</Alert> : <></>}
     </>

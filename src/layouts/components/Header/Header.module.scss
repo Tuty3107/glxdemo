@@ -41,9 +41,6 @@
     display: inline-block;
   }
 }
-.userInfo {
-  font-size: 1.6rem;
-}
 .VN {
   text-decoration: none;
   pointer-events: none;
@@ -57,18 +54,10 @@
     animation: changeColor 0.5s forwards;
   }
 }
-.login {
-  cursor: default;
-  font-size: 1.4rem;
-  &:hover {
-    animation: changeColor 0.7s linear forwards;
-  }
-}
 .navbar-mobie {
   display: none;
   overflow-x: hidden;
 }
-
 @keyframes changeColor {
   from {
     color: var(--primary);

@@ -1,20 +1,15 @@
 import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Header.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { UserSignIn } from "../UserInfo";
 import Navbar1 from "../Navbar";
 import NavMobie from "../NavMobie";
 import FormLogIn from "~/components/FormLogIn";
 import Search from "../Search/Search";
+import ToggleLogIn from "../ToggleLogIn";
 
 const cx = classNames.bind(styles);
 function Header() {
-  const user = localStorage.getItem("userSignIn");
-
-  console.log(user)
   const [show, setShow] = useState(true);
   const handleClose = () => setShow(false);
 
@@ -29,16 +24,7 @@ function Header() {
         </div>
         <Search />
         <ul className={cx("primary-nav-wrapper")}>
-          {user ? (
-            <li className={cx("userInfo")}>
-              <UserSignIn />
-            </li>
-          ) : (
-            <li className={cx("login")} onClick={() => setShow(true)}>
-              <FontAwesomeIcon icon={faUser} />
-              Đăng nhập
-            </li>
-          )}
+          <ToggleLogIn onClick={() => setShow(true)}/>
           <li className={cx("languages")}>
             <a className={cx("VN")}>VN</a>
             <span>|</span>

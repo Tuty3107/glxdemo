@@ -51,7 +51,7 @@ function SignUp() {
               placeholder="Mật khẩu"
               type="Mật khẩu"
               onChange={(e) => setPasswordUser(e.target.value)}
-              onBlur={() => {emailUser.length === 0 ? setValid1(true) : setValid1(false)}}
+              onBlur={() =>{passwordUser.length === 0 ? setValid1(true) : setValid1(false)}}
             />
             {valid1 ? <Alert>Please fill out this field</Alert> : <></>}
           </Col>
@@ -112,10 +112,8 @@ function SignUp() {
           Tôi đã đọc và đồng ý với
           <a> CHÍNH SÁCH </a> của chương trình
         </p>
-        <div
-          className={cx("btn-form", "icon-fb")}
-          onClick={() => handleSignIn(emailUser, passwordUser)}
-        >
+        <div className={cx("btn-form", "icon-fb")}
+          onClick={() => handleSignIn(emailUser, passwordUser)}>
           ĐĂNG KÝ
         </div>
       </form>

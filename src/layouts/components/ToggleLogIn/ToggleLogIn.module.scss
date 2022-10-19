@@ -1,0 +1,19 @@
+.userInfo {
+  font-size: 1.6rem;
+}
+.login {
+  cursor: default;
+  font-size: 1.4rem;
+  &:hover {
+    animation: changeColor 0.7s linear forwards;
+  }
+}
+
+@keyframes changeColor {
+  from {
+    color: var(--primary);
+  }
+  to {
+    color: var(--orange-color);
+  }
+}

@@ -15,7 +15,9 @@ function UserSignIn() {
       </div>
     );
   };
-  const {userSignIn: { email },} = useContext(EmailPwContext);
+  const {
+    userSignIn: { email },
+  } = useContext(EmailPwContext);
   const handleClick = () => {
     signOut(auth)
       .then(() => {
@@ -24,7 +26,7 @@ function UserSignIn() {
         window.location.reload();
       })
       .catch((error) => {
-        console.log(error);
+        alert("Something wrong");
       });
   };
 

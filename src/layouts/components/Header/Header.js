@@ -24,7 +24,7 @@ function Header() {
         </div>
         <Search />
         <ul className={cx("primary-nav-wrapper")}>
-          <ToggleLogIn onClick={() => setShow(true)}/>
+          <ToggleLogIn onClick={() =>setShow(true)} />
           <li className={cx("languages")}>
             <a className={cx("VN")}>VN</a>
             <span>|</span>
@@ -36,7 +36,7 @@ function Header() {
         <Navbar1 />
       </div>
       <div className={cx("navbar-mobie")}>
-        <NavMobie />
+        <NavMobie onClick={() => setShow(true)}/>
       </div>
     </div>
   );

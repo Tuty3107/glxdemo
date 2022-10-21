@@ -1,0 +1,28 @@
+.listItems-mobie {
+  width: 100%;
+  text-align: right;
+  text-transform: uppercase;
+}
+.nav-item-mobie {
+  padding: 10px 0;
+  color: var(--text-color);
+  &:hover {
+    color: var(--orange-color);
+  }
+}
+.nav-item-mobie {
+  svg {
+    margin-left: 10px;
+    display: inline-block !important;
+  }
+}
+.dropdown-list {
+  margin-right: 20px;
+  color:var(--text-color);
+  li {
+    padding: 5px 0;
+    &:hover {
+      color: var(--orange-color);
+    }
+  }
+}

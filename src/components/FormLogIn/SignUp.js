@@ -12,6 +12,7 @@ const cx = classNames.bind(styles);
 function SignUp() {
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState("");
+  const [checked, setChecked] = useState("Female");
   const [valid, setValid] = useState(false);
   const [valid1, setValid1] = useState(false);
   const valueSignIn = useContext(EmailPwContext);
@@ -34,11 +35,18 @@ function SignUp() {
           </Col>
           <Col lg={6} md={6} xs={6}>
             <label style={{ padding: "20px 0px" }}>
-              {" "}
               Gender :
-              <input type="radio" id="male" value="Male" /> 
+              <input 
+                type="radio" id="male" value="Male" 
+                checked={checked === "Male"}
+                onChange={() => setChecked("Male")}
+              />
               <label htmlFor="male">Male</label>
-              <input type="radio" id="female" value="Female" /> 
+              <input 
+                type="radio" id="female" value="Female" 
+                checked={checked === "Female"}
+                onChange={() => setChecked("Female")}
+              />
               <label htmlFor="female">Female</label>
             </label>
           </Col>

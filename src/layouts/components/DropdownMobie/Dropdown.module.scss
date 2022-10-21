@@ -6,8 +6,13 @@
 .nav-item-mobie {
   padding: 10px 0;
   color: var(--text-color);
-  &:hover {
-    color: var(--orange-color);
+}
+.nav-item-mobie {
+  a {
+    color: var(--text-color);
+    &:hover {
+      color: var(--orange-color);
+    }
   }
 }
 .nav-item-mobie {
@@ -23,6 +28,16 @@
     padding: 5px 0;
     &:hover {
       color: var(--orange-color);
+    }
+  }
+}
+.dropdown-list {
+  li {
+    a {
+      color: var(--text-color);
+      &:hover {
+        color: var(--orange-color);
+      }
     }
   }
 }

@@ -4,7 +4,8 @@ import styles from "./Dropdown.module.scss";
 import Dropdown from "./Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const cx = classNames.bind(styles);
 function MenuItems({ items }) {
@@ -17,7 +18,7 @@ function MenuItems({ items }) {
           onMouseOver={() => setdropdown(true)}
           onMouseLeave={() => setdropdown(false)}
         >
-          {items.content}
+          <Link to={items.to}>{items.content}</Link>
           <FontAwesomeIcon
             icon={faAngleDown}
             style={dropdown ? { display: "none" } : { display: "block" }}
@@ -25,7 +26,9 @@ function MenuItems({ items }) {
           <Dropdown submenu={items.submenu} dropdown={dropdown} />
         </li>
       ) : (
-        <li className={cx("nav-item-mobie")}>{items.content}</li>
+        <li className={cx("nav-item-mobie")}>
+          <Link to={items.to}>{items.content}</Link>
+        </li>
       )}
     </>
   );

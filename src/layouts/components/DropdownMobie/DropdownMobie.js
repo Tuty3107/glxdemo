@@ -1,11 +1,13 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Dropdown.module.scss";
-import { listItems } from "./ListItems";
 import MenuItems from "./MenuItems";
+import { useFirestore } from "~/hooks";
 
 const cx = classNames.bind(styles);
 function DropdownMobie() {
+  const listItems = useFirestore("submenu");
+
   return (
     <ul className={cx("listItems-mobie")}>
       {listItems.map((item) => {

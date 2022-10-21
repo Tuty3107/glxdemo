@@ -11,11 +11,10 @@ import ToggleLogIn from "../ToggleLogIn";
 const cx = classNames.bind(styles);
 function Header() {
   const [show, setShow] = useState(true);
-  const handleClose = () => setShow(false);
 
   return (
     <div className={cx("wrapper")}>
-      <FormLogIn show={show} onHide={handleClose} />
+      <FormLogIn show={show} onHide={() => setShow(false)} />
       <div className={cx("inner")}>
         <div className={cx("logo")}>
           <Link to="/">
@@ -36,7 +35,7 @@ function Header() {
         <Navbar1 />
       </div>
       <div className={cx("navbar-mobie")}>
-        <NavMobie onClick={() => setShow(true)}/>
+        <NavMobie onClick={() => setShow(true)} />
       </div>
     </div>
   );

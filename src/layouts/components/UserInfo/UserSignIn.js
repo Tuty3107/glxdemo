@@ -26,7 +26,7 @@ function UserSignIn() {
         window.location.reload();
       })
       .catch((error) => {
-        alert("Something wrong");
+        console.log(error.messesage);
       });
   };
 

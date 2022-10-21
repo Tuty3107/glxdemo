@@ -4,6 +4,7 @@ import styles from "./Dropdown.module.scss";
 import Dropdown from "./Dropdown";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import PropTypes from 'prop-types'
 
 const cx = classNames.bind(styles);
 function MenuItems({ items }) {
@@ -29,5 +30,7 @@ function MenuItems({ items }) {
     </>
   );
 }
-
+MenuItems.propTypes = {
+  items: PropTypes.object.isRequired
+}
 export default MenuItems;

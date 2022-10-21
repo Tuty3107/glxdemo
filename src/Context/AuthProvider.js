@@ -15,7 +15,6 @@ function AuthProvider({ children }) {
           uid,
           photoURL
         });
-        localStorage.setItem("user", user)
       }
     });
 

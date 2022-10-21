@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import { auth, db } from "~/firebase/config";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { addDoc, collection } from "firebase/firestore";
+import ToastError from "../components/ToastError/ToastError";
 
 const EmailPwContext = React.createContext();
 function EmailPwProvider({ children }) {
   const [userSignIn, setUserSignIn] = useState({});
+  const [ toast, setToast ] = useState(false);
 
   const handleSignIn = (email = "", password = "") => {
     createUserWithEmailAndPassword(auth, email, password)
@@ -21,10 +23,10 @@ function EmailPwProvider({ children }) {
           });
           localStorage.setItem("userSignIn", userSignIn);
         }
+        setToast(false)
       })
       .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
+        setToast(true)
       });
   };
   const valusSignIn = {
@@ -32,8 +34,17 @@ function EmailPwProvider({ children }) {
     handleSignIn,
   };
 
+  React.useEffect(() => {
+    let messToastID = setTimeout(() => {
+      setToast(false)
+    }, 10000)
+
+    return () => clearTimeout(messToastID)
+  }, [toast]) 
+
   return (
     <EmailPwContext.Provider value={valusSignIn}>
+      {toast ? <ToastError /> : <></>}
       {children}
     </EmailPwContext.Provider>
   );

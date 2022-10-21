@@ -1,11 +1,11 @@
 import React from "react";
 import classNames from "classnames/bind";
+import styles from "./Navbar.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from "react-router-dom";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
-import ArtImg from "~/components/ArticleImg/ArtImg";
-import styles from "./Navbar.module.scss";
 import { useFirestore }  from "~/hooks";
+import ArtImg from "~/components/ArticleImg/ArtImg";
 import Submenu from "../Submenu";
 
 const cx = classNames.bind(styles);
@@ -32,7 +32,6 @@ function Navbar1() {
       return showing[index];
     }
   });
-
   return (
     <div className={cx("nav-wrapper")}>
       <div className={cx("nav-container")}>

@@ -19,7 +19,7 @@ function UserInfo() {
   } = useContext(AuthContext);
   const handleClick = () => {
     auth.signOut();
-    localStorage.removeItem("user");
+    localStorage.removeItem("userSignIn");
     window.location.reload();
   };
   return (

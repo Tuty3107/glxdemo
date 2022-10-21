@@ -1,20 +1,20 @@
 import React from "react";
 import TabChange from "../TabChange/TabChange";
 import TabpaneItems from "./TabpaneItems";
-import { useFirestore }  from "~/hooks";
+import { useFirestore } from "~/hooks";
 
 function Tabpane() {
   const movies = useFirestore("films");
-  let coming = []
-  let showing = []
-  movies.map(movie => {
-    if(movie.coming === true) {
-      coming.push(movie)
-    } else if(movie.coming === false){
-      showing.push(movie)
+  let coming = [];
+  let showing = [];
+  movies.map((movie) => {
+    if (movie.coming === true) {
+      coming.push(movie);
+    } else if (movie.coming === false) {
+      showing.push(movie);
     }
-  })
-  
+  });
+
   return (
     <TabChange
       text1={"Now Showing"}

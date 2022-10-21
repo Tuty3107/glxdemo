@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Alert } from "react-bootstrap";
 import classNames from "classnames/bind";
 import styles from "./FormLogIn.module.scss";
+import PropTypes from 'prop-types'
 
 const cx = classNames.bind(styles);
 function Field({ placeholder, type }) {
@@ -32,3 +33,7 @@ function Field({ placeholder, type }) {
 }
 
 export default Field;
+Field.prospTypes = {
+  placeholder: PropTypes.string,
+  type: PropTypes.string
+}

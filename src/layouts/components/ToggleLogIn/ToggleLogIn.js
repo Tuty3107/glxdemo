@@ -12,7 +12,7 @@ function ToggleLogIn({ onClick }) {
     <>
       {user ? (
         <li className={cx("userInfo")}>
-          <UserSignIn/>
+          <UserSignIn />
         </li>
       ) : (
         <li className={cx("login")} onClick={onClick}>

@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 function UserSignIn() {
   const renderItem = () => {
     return (
-      <div className={cx("signOut")} onClick={handleClick}>
+      <div className={cx("signOut")} onClick={handleSignOut}>
         Sign out
       </div>
     );
@@ -18,7 +18,7 @@ function UserSignIn() {
   const {
     userSignIn: { email },
   } = useContext(EmailPwContext);
-  const handleClick = () => {
+  const handleSignOut = () => {
     signOut(auth)
       .then(() => {
         console.log("Log out successful !!!");
@@ -33,8 +33,8 @@ function UserSignIn() {
   return (
     <ul className={cx("user-info")}>
       <img
-        src="https://i.pinimg.com/564x/6b/73/d2/6b73d2ed3b0da7e9c836ee66ca06f229.jpg"
         className={cx("avatar")}
+        src="https://i.pinimg.com/564x/6b/73/d2/6b73d2ed3b0da7e9c836ee66ca06f229.jpg"
       />
       <Tippy
         interactive

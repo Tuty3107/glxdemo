@@ -8,12 +8,9 @@ import { LoginContext } from "~/Context/LoginProvider";
 import Field from "./Field";
 
 const cx = classNames.bind(styles);
-function LogIn() {
+function LogIn({ onClick }) {
   const handleFbLogin = useContext(LoginContext);
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
+  
   return (
     <>
       <p className={cx("text-heading")}>
@@ -30,7 +27,7 @@ function LogIn() {
           <FontAwesomeIcon icon={faFacebook} className={cx("icon")} />
           Log in with Facebook
         </div>
-        <div className={cx("btn-form")} onClick={(e) => handleSubmit(e)}>
+        <div className={cx("btn-form")} onClick={onClick}>
           <Button lg colorBg>
             ĐĂNG NHẬP
           </Button>

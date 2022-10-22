@@ -9,7 +9,7 @@ import Field from "./Field";
 import { EmailPwContext } from "~/Context/EmailPwProvider";
 
 const cx = classNames.bind(styles);
-function SignUp() {
+function SignUp({ onClick }) {
   const [emailUser, setEmailUser] = useState("");
   const [passwordUser, setPasswordUser] = useState("");
   const [checked, setChecked] = useState("Female");
@@ -28,7 +28,8 @@ function SignUp() {
           onChange={(e) => setEmailUser(e.target.value)}
           onBlur={() => {emailUser.length === 0 ? setValid(true) : setValid(false)}}
         />
-        {valid ? <Alert>Please fill out this field</Alert> : <></>}
+        {valid ? <Alert>Please fill out this field</Alert> : 
+        <p style={{fontSize: '1.5rem', fontStyle:'italic'}}>Example: user@gmail.com</p>}
         <Row className={cx("city")}>
           <Col lg={6} md={6} xs={6}>
             <Field placeholder="Số điện thoaị" />
@@ -57,11 +58,12 @@ function SignUp() {
               className={cx("inp")}
               value={passwordUser}
               placeholder="Mật khẩu"
-              type="Mật khẩu"
               onChange={(e) => setPasswordUser(e.target.value)}
               onBlur={() =>{passwordUser.length === 0 ? setValid1(true) : setValid1(false)}}
             />
-            {valid1 ? <Alert>Please fill out this field</Alert> : <></>}
+            {valid1 ? 
+            <Alert>Please fill out this field</Alert> : 
+            <p style={{fontSize: '1.2rem', fontStyle:'italic'}}>Password must be at least 6 characters length</p>}
           </Col>
           <Col lg={6} md={6} xs={6}>
             <Field placeholder="Xác nhận mật khẩu" />
@@ -123,6 +125,9 @@ function SignUp() {
         <div className={cx("btn-form", "icon-fb")}
           onClick={() => handleSignIn(emailUser, passwordUser)}>
           ĐĂNG KÝ
+        </div>
+        <div className={cx("btn-form", "icon-fb")} onClick={onClick}>
+          ĐĂNG NHẬP
         </div>
       </form>
     </>

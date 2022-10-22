@@ -15,7 +15,7 @@ function FormLogIn(props) {
           text2="/"
           text3="SIGN UP"
           content1={<LogIn />}
-          content2={<SignUp />}
+          content2={<SignUp onClick={props.onHide} />}
         />
       </Modal.Body>
     </Modal>

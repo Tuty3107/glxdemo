@@ -11,6 +11,7 @@ import ToggleLogIn from "../ToggleLogIn";
 const cx = classNames.bind(styles);
 function Header() {
   const [show, setShow] = useState(true);
+  React.useEffect(() => {}, []);
 
   return (
     <div className={cx("wrapper")}>
@@ -23,7 +24,7 @@ function Header() {
         </div>
         <Search />
         <ul className={cx("primary-nav-wrapper")}>
-          <ToggleLogIn onClick={() =>setShow(true)} />
+          <ToggleLogIn onClick={() => setShow(true)} />
           <li className={cx("languages")}>
             <a className={cx("VN")}>VN</a>
             <span>|</span>

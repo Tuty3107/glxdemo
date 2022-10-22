@@ -27,10 +27,8 @@ function LogIn({ onClick }) {
           <FontAwesomeIcon icon={faFacebook} className={cx("icon")} />
           Log in with Facebook
         </div>
-        <div className={cx("btn-form")} onClick={onClick}>
-          <Button lg colorBg>
+        <div className={cx("icon-fb")} onClick={onClick}>
             ĐĂNG NHẬP
-          </Button>
         </div>
       </form>
     </>

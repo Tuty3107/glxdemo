@@ -44,20 +44,7 @@
   cursor: pointer;
   background-position: right center; /* change the direction of the change here */
 }
-.btn-form {
-  position: relative;
-  button {
-    border-radius: 10px;
-    width: 100%;
-    max-width: 100%;
-    font-size: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    padding: 15px;
-    line-height: 1;
-    margin-top: 20px;
-  }
-}
+
 /*Sign In*/
 .capcha-wrap {
   display: flex;

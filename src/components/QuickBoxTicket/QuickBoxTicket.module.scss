@@ -5,7 +5,9 @@
 .btn-quickbuy {
   position: relative;
   padding-top: 20px;
+  padding-bottom: 20px;
   button {
+    transform: translate(0%, -70%);
     span > a {
       text-transform: uppercase;
       color: var(--primary);

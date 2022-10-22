@@ -11,9 +11,9 @@ function FormLogIn(props) {
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body style={{ padding: "0 50px" }}>
         <TabChange
-          text1="LOG IN"
+          text1="SIGN UP"
           text2="/"
-          text3="SIGN UP"
+          text3="LOG IN"
           content1={<SignUp onClick={props.onHide} />}
           content2={<LogIn />}
         />

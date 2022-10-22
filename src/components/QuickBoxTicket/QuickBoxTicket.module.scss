@@ -3,11 +3,7 @@
 }
 /*btn*/
 .btn-quickbuy {
-  position: relative;
-  padding-top: 20px;
-  padding-bottom: 20px;
   button {
-    transform: translate(0%, -70%);
     span > a {
       text-transform: uppercase;
       color: var(--primary);
@@ -16,11 +12,12 @@
 }
 .btn-buy {
   position: relative;
-  padding-top: 50px;
+  right: -255px;
   button {
-    position: absolute;
-    right: 0;
-    text-transform: uppercase;
+    span{
+      text-transform: uppercase;
+      color: var(--primary);
+    }
   }
 }
 //Group title

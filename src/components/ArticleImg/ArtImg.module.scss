@@ -16,7 +16,7 @@
 }
 .content,
 .title {
-  margin: 20px;
+  padding: 20px 20px 0 20px;
   color: var(--primary);
   font-size: 2rem;
   text-transform: uppercase;
@@ -45,9 +45,14 @@
   }
 }
 //Button
-button > span {
-  text-transform: uppercase;
+.artcle-btn {
+  position: relative;
+  top: 50%;
+  span {
+    text-transform: uppercase;
+  }
 }
+
 .xs {
   width: 220px;
   height: 147px;

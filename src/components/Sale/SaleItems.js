@@ -13,7 +13,7 @@ function SaleItems({items, folder}) {
             lg btn
             title={movie.title}
             content={movie.content}
-            children="MUA VÉ"
+            children="Chi tiết"
             to={`/sale/${movie.content}`}
             url={process.env.PUBLIC_URL + `/${folder}/${movie.src|| movie.scheduleUrl}`}
           />
@@ -26,7 +26,7 @@ function SaleItems({items, folder}) {
             lg btn
             title={movie.title}
             content={movie.content}
-            children="MUA VÉ"
+            children="Chi tiết"
             url={process.env.PUBLIC_URL + `/${folder}/${movie.src|| movie.scheduleUrl}`}
           />
         </Col>

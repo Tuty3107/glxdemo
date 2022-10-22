@@ -33,9 +33,11 @@ function ArtImg({
           </div>
         )}
         {btn && (
-          <Button to={to} primary medium>
-            {children}
-          </Button>
+          <div className={cx('artcle-btn')}>
+            <Button to={to} primary small>
+              {children}
+            </Button>
+          </div>
         )}
       </figure>
     </article>

@@ -29,7 +29,6 @@
     color:#ffffff;
   }
 }
-
 //Details
 .reating-movie-detail {
   span {
@@ -39,12 +38,6 @@
 .details-rating {
   display: flex;
   padding: 20px 0;
-  button {
-    position: relative;
-    top: 14px;
-    text-align: center;
-    padding: 0 3px;
-  }
 }
 .details-title {
   font-size: 2rem;

@@ -1,13 +1,13 @@
 .wrapper {
   display: inline-block;
-  position: absolute;
   background-color: transparent;
   color: var(--primary);
   text-align: center;
-  top: 50%;
-  transform: translate(-50%, -50%);
   border: 1px solid var(--primary);
   cursor: pointer;
+  //position: absolute;
+  // top: 50%;
+  // transform: translate(-50%, -50%);
 }
 /*btn type*/
 .primary {

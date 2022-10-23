@@ -37,7 +37,7 @@
 .rate {
   max-width: 100%;
   position: relative;
-  top: 30%;
+  top: 40%;
   span {
     padding: 0 5px;
     background-color: var(--orange-color);
@@ -47,12 +47,11 @@
 //Button
 .artcle-btn {
   position: relative;
-  top: 50%;
+  top: 40%;
   span {
     text-transform: uppercase;
   }
 }
-
 .xs {
   width: 220px;
   height: 147px;
@@ -81,6 +80,9 @@
   .content,
   .title {
     font-size: 1.2rem;
+  }
+  .rate {
+    top: 20%;
   }
   .xs {
     max-width: 120px;

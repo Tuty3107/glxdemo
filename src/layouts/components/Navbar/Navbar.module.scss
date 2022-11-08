@@ -54,7 +54,7 @@
   color: var(--primary);
   font-weight: 500;
   text-transform: uppercase;
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   svg {
     padding-left: 10px;
   }
@@ -91,10 +91,10 @@
 .submenu-movie {
   width: var(--container-width);
   color: var(--primary);
-  display: none;
+  z-index: 2;
   position: relative;
-  padding-top: 25px;
-  margin-top: 25px;
+  padding-top: 20px;
+  margin-top: 16px;
 }
 .subnav:hover .submenu-movie {
   display: block;
@@ -131,9 +131,9 @@
     margin: 10px 10px 20px 10px;
   }
 }
-.submenu-group >article> figure {
+.submenu-group > article > figure {
   a:hover {
-    color: var(--primary)
+    color: var(--primary);
   }
 }
 .submenu-movie {
@@ -192,4 +192,3 @@
     display: block;
   }
 }
-

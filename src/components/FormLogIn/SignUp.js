@@ -126,7 +126,7 @@ function SignUp({ onClick }) {
           onClick={() => handleSignIn(emailUser, passwordUser)}>
           ĐĂNG KÝ
         </div>
-        <div className={cx("btn-form", "icon-fb")} onClick={onClick}>
+        <div className={cx("btn-form", "signin")} onClick={onClick}>
           ĐĂNG NHẬP
         </div>
       </form>
